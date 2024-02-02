@@ -15,21 +15,28 @@
 </form>
 
 <p>
-    Mean Score: {{mean_score}}
+    Mean Score: {{ mean_score }}
 </p>
 <p>
-    Best Score: {{best_score}}
+    Median Score: {{ median_score }}
 </p>
 <p>
-    Worst Score: {{worst_score}}
+    Best Score: {{ best_score }}
 </p>
+<p>
+    Worst Score: {{ worst_score }}
+</p>
+<p>
+    Total Number of Entries: {{ total_entries }}
+</p>
+
 <!--Print each of the entered scores in a list-->
 <ul>
     {% for score in scores %}
-    <li>
-        {{score}}
-    </li>
-    {%endfor %}
+        <li>
+            {{ score }}
+        </li>
+    {% endfor %}
 </ul>
 
 </body>
